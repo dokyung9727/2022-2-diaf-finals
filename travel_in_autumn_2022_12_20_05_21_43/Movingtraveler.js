@@ -1,9 +1,9 @@
 class Movingtraveler{
     constructor(){
-      this.tvx = 1;
-      this.tvy = 0.1;
+      this.tvx = 0.7;
+      this.tvy = 0.15;
       this.pos = createVector(170, 280);
-      this.vel = createVector(0.5,0.1);
+      this.vel = createVector(this.tvx, this.tvy);
       this.acc = createVector(0,0);
       this.w = 40;
     }
@@ -17,16 +17,18 @@ class Movingtraveler{
     }
     
     checkatt2(){
-      if(this.pos.x == 420){
-        this.tvx = 1;
-      }
-      if(this.pos.x < 420){
-        this.ttvy = -0.1;
-      }
+        if(this.pos.x >= 345){
+            this.tvx = 0.7;
+            this.tvy = -this.tvy;
+          }
+          if(this.pos.x < 345){
+            this.tvx = 0.7;
+            this.tvy = 0.15;
+          }
     }
     
     show(){
-      tint(255,this.tt);
+      tint(255,255);
       image(traveler, this.pos.x, this.pos.y, this.w, this.w);
     }
   }
