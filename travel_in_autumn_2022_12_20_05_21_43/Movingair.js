@@ -13,6 +13,7 @@ class Movingair {
       this.acc.set(0,0);
       
       this.checkatt1();
+      this.checktraveler();
     }
     
     checkatt1(){
@@ -21,6 +22,17 @@ class Movingair {
       }
       if(this.pos.y < 260){
         this.tt = 255;
+      }
+    }
+
+    checktraveler(){
+      if(travelermove.pos.x <= 170 && travelermove.pos.y >= 272){
+        this.pos.x = 140;
+        this.pos.y = 255;
+        this.tt = 255;
+        if(this.pos.x >= 140){
+          this.pos.add(this.vel);
+        }
       }
     }
     
