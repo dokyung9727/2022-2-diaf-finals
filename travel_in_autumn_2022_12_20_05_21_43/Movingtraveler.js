@@ -18,12 +18,7 @@ class Movingtraveler{
     
     checkatt2(){
         if(this.pos.x >= 345){
-            this.tvx = 0.7;
-            this.tvy = -this.tvy;
-          }
-          if(this.pos.x < 345){
-            this.tvx = 0.7;
-            this.tvy = 0.15;
+            this.vel.y = -0.2
           }
     }
     
