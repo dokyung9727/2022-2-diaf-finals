@@ -1,25 +1,31 @@
 let mapimg;
 let airplane;
+let traveler;
 
 let place;
 let airmove;
+let travelermove;
 
 function setup() {
   createCanvas(600, 600);
   mapimg = loadImage('busan map.jpg');
   airplane = loadImage('airplane.png');
+  traveler = loadImage('traveler.png');
 
   airmove = new Movingair();
   place = new Attraction();
+  travelermove = new Movingtraveler();
 }
 
 function draw() {
-  background(220);
   image(mapimg,0,0, 600,600);
-  image(airplane, 50, 300, 50, 50);
 
   airmove.update();
   airmove.show();
+  if(airmove.tt == 0){
+    travelermove.update();
+    travelermove.show();
+  }
   place.update();
   place.show();
 }
