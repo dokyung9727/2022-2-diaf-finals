@@ -47,18 +47,19 @@ class Attraction {
     }
   
     show() {
-      fill(this.c1);
-      strokeWeight(this.attline);
-      ellipse(this.pos1.x, this.pos1.y, this.w, this.w);
-      fill(this.c2);
-      strokeWeight(this.attline);
-      ellipse(this.pos2.x, this.pos2.y, this.w, this.w);
-      fill(this.c3);
-      strokeWeight(this.attline);
-      ellipse(this.pos3.x, this.pos3.y, this.w, this.w);
-      fill(this.c4);
-      strokeWeight(this.attline);
-      ellipse(this.pos4.x, this.pos4.y, this.w, this.w);
+        tint(255,255);
+        fill(this.c1);
+        strokeWeight(this.attline);
+        ellipse(this.pos1.x, this.pos1.y, this.w, this.w);
+        fill(this.c2);
+        strokeWeight(this.attline);
+        ellipse(this.pos2.x, this.pos2.y, this.w, this.w);
+        fill(this.c3);
+        strokeWeight(this.attline);
+        ellipse(this.pos3.x, this.pos3.y, this.w, this.w);
+        fill(this.c4);
+        strokeWeight(this.attline);
+        ellipse(this.pos4.x, this.pos4.y, this.w, this.w);
     }
   }
   
