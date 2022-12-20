@@ -1,5 +1,6 @@
 let mapimg;
 let airplane;
+let airplane2;
 let traveler;
 
 let place;
@@ -11,6 +12,7 @@ function setup() {
   mapimg = loadImage('busan map.jpg');
   airplane = loadImage('airplane.png');
   traveler = loadImage('traveler.png');
+  airplane2 = loadImage('airplane2.png')
 
   airmove = new Movingair();
   place = new Attraction();
@@ -25,11 +27,6 @@ function draw() {
   if(airmove.tt == 0){
     travelermove.update();
     travelermove.show();
-  }
-  if(travelermove.pos.x == 170 && travelermove.pos.y == 272){
-    airmove.pos.x = 100;
-    airmove.pos.y = 260;
-    airmove.tt = 255;
   }
   place.update();
   place.show();
