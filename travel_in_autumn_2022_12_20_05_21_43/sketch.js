@@ -5,6 +5,7 @@ let traveler;
 
 let place;
 let airmove;
+let airmove2;
 let travelermove;
 
 function setup() {
@@ -17,6 +18,7 @@ function setup() {
   airmove = new Movingair();
   place = new Attraction();
   travelermove = new Movingtraveler();
+  airmove2 = new Arrivingair();
 }
 
 function draw() {
@@ -27,6 +29,10 @@ function draw() {
   if(airmove.tt == 0){
     travelermove.update();
     travelermove.show();
+  }
+  if(travelermove.pos.x <=170){
+    airmove2.update();
+    airmove2.show();
   }
   place.update();
   place.show();
