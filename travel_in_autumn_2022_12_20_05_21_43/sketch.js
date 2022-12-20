@@ -1,8 +1,11 @@
+let mapimg; 
+
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(600, 600);
+  mapimg = loadImage('busan map.jpg');
 }
 
 function draw() {
   background(220);
-  circle(random(100),random(100),20);
+  image(mapimg,0,0, 600,600);
 }
